@@ -20,4 +20,5 @@ smr-list-utils <command> <list_file>
 
 ### Examples
 
-`./smr-list-utils
+`smr-list-utils issue ../Illegal-Mod-Sites/lists/minecraft.yaml`  
+`smr-list-utils sort ../Illegal-Mod-Sites/lists/minecraft.yaml`
