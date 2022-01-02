@@ -32,15 +32,6 @@ jobs:
           upload_url=$(curl -sL https://api.github.com/repos/StopModReposts/list-utils/releases/latest | jq -r '.upload_url')
           echo UPLOAD_URL=$upload_url >> $GITHUB_ENV
 
-      - name: Get extension filename
-        id: extzip
-        run: |
-          files=(./web-ext-artifacts/*)
-          echo EXT_ARTIFACT_PATH=$files >> $GITHUB_ENV
-          cd web-ext-artifacts
-          files2=(*)
-          echo EXT_ARTIFACT_NAME=$files2 >> $GITHUB_ENV
-
       - name: Upload release ELF
         uses: actions/upload-release-asset@v1
         with:
