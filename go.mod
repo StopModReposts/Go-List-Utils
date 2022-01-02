@@ -1,4 +1,4 @@
-module github.com/StopModReposts/list-utils
+module github.com/StopModReposts/Go-List-Utils
 
 go 1.17
 

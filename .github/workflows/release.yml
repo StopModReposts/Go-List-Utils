@@ -29,7 +29,7 @@ jobs:
 
       - name: Get release upload URL
         run: |
-          upload_url=$(curl -sL https://api.github.com/repos/StopModReposts/list-utils/releases/latest | jq -r '.upload_url')
+          upload_url=$(curl -sL https://api.github.com/repos/StopModReposts/Go-List-Utils/releases/latest | jq -r '.upload_url')
           echo UPLOAD_URL=$upload_url >> $GITHUB_ENV
 
       - name: Upload release ELF
