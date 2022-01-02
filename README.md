@@ -22,3 +22,10 @@ smr-list-utils <command> <list_file>
 
 `smr-list-utils issue ../Illegal-Mod-Sites/lists/minecraft.yaml`  
 `smr-list-utils sort ../Illegal-Mod-Sites/lists/minecraft.yaml`
+
+### Workflow
+
+First, add `approved` label to all issues that are good  
+Then run the `issue` command  
+In your IDE, change the domains that weren't parsed successfully  
+Then run `sort`
