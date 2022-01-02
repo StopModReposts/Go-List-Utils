@@ -23,7 +23,7 @@ func IssueCommand() {
 
 	var sites []string
 	var issueids []int
-	var commitmsg string = "Closes"
+	var commitmsg string
 
 	for _, issue := range issues {
 		var title string = *issue.Title
@@ -51,7 +51,7 @@ func IssueCommand() {
 	}
 
 	for _, id := range issueids {
-		commitmsg = commitmsg + " #" + fmt.Sprint(id)
+		commitmsg = commitmsg + "Closes #" + fmt.Sprint(id) + " "
 	}
 
 	SaveList(f, t)
