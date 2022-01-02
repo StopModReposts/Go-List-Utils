@@ -2,10 +2,20 @@
 
 This is a Go CLI tool that helps with managing the StopModReposts blacklist.
 
-## Downloading
+## Install
 
-Use GitHub Releases and download binary. ELF is for Linux, EXE is for windows  
-**WARNING:** I have not tested this on anything other than Linux
+Use GitHub Releases and download binary.
+
+### Linux Quickinstall
+
+```bash
+wget https://github.com/StopModReposts/list-utils/releases/latest/download/smr-list-utils.elf -O ~/.local/bin/smr-list-utils
+chmod +x ~/.local/bin/smr-list-utils
+```
+
+### Windows Install
+
+Download binary from releases, place in any folder. Run via cmd/powershell
 
 ## Usage
 
