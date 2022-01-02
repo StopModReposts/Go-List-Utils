@@ -1,0 +1,35 @@
+name: Build List Utilities
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.5
+
+      - name: Cache
+        uses: actions/cache@v2.1.7
+        with:
+          # A list of files, directories, and wildcard patterns to cache and restore
+          path: out
+          # An explicit key for restoring and saving the cache
+          key: cachego
+
+      - name: Build
+        run: ./BUILD.sh
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: smr-list-utils
+          path: out/*
