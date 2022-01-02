@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"regexp"
 	"strings"
@@ -21,10 +22,13 @@ func IssueCommand() {
 	HandleError(err4)
 
 	var sites []string
+	var issueids []int
+	var commitmsg string = "Closes"
+
 	for _, issue := range issues {
 		var title string = *issue.Title
 		var prefix1 string = "New site to add: "
-
+		issueids = append(issueids, issue.GetNumber())
 		hasPrefix := strings.HasPrefix(title, prefix1)
 
 		if hasPrefix {
@@ -45,9 +49,15 @@ func IssueCommand() {
 	for _, siteText := range sites {
 		t = append(t, IllegalSite{Domain: siteText, Notes: "/", Path: "/", Reason: "Illegal redistribution"})
 	}
+
+	for _, id := range issueids {
+		commitmsg = commitmsg + " #" + fmt.Sprint(id)
+	}
+
 	SaveList(f, t)
 	warnMsg := "The parsing is very fragile; please review the changes via Git and change the titles"
 	LogSeparator(len(warnMsg) - 1)
 	log.Println(warnMsg)
 	LogSeparator(len(warnMsg) - 1)
+	log.Println("Generated commit message", commitmsg)
 }
