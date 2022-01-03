@@ -9,7 +9,7 @@ Use GitHub Releases and download binary.
 ### Linux Quickinstall
 
 ```bash
-wget https://github.com/StopModReposts/Go-List-Utils/releases/latest/download/smr-list-utils.elf -O ~/.local/bin/smr-list-utils
+wget https://github.com/StopModReposts/List-Utils/releases/latest/download/smr-list-utils.elf -O ~/.local/bin/smr-list-utils
 chmod +x ~/.local/bin/smr-list-utils
 ```
 
