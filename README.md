@@ -6,12 +6,14 @@ This is a Go CLI tool that helps with managing the StopModReposts blacklist.
 
 Use GitHub Releases and download binary.
 
-### Linux Quickinstall
+### Linux Install
 
 ```bash
 wget https://github.com/StopModReposts/List-Utils/releases/latest/download/smr-list-utils.elf -O ~/.local/bin/smr-list-utils
 chmod +x ~/.local/bin/smr-list-utils
 ```
+
+for fedora/opensus users, you can use the `dada513/copr` fedora COPR repo and install the `stopmodreposts-utils` package
 
 ### Windows Install
 
