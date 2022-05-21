@@ -13,8 +13,6 @@ wget https://github.com/StopModReposts/List-Utils/releases/latest/download/smr-l
 chmod +x ~/.local/bin/smr-list-utils
 ```
 
-for fedora/opensus users, you can use the `dada513/copr` fedora COPR repo and install the `stopmodreposts-utils` package
-
 ### Windows Install
 
 Download binary from releases, place in any folder. Run via cmd/powershell
